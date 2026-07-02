@@ -1,0 +1,122 @@
+// Header Color Change on Scroll
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 50){
+        header.classList.add("scrolled");
+    }
+    else{
+        header.classList.remove("scrolled");
+    }
+
+});
+
+
+// Fade In Animation
+
+window.onload = () =>{
+
+    document.querySelector("main img").style.opacity = "0";
+
+    setTimeout(()=>{
+
+        document.querySelector("main img").style.transition="1.5s";
+        document.querySelector("main img").style.opacity="1";
+
+    },300);
+
+};
+
+
+// Placeholder Animation
+
+const input = document.querySelector("input");
+
+const texts=[
+"Search for restaurant...",
+"Search for biryani...",
+"Search for pizza...",
+"Search for dosa...",
+"Search for burger...",
+"Search for momos...",
+"Search for cakes..."
+];
+
+let i=0;
+
+setInterval(()=>{
+
+    input.setAttribute("placeholder",texts[i]);
+
+    i++;
+
+    if(i===texts.length){
+        i=0;
+    }
+
+},2000);
+
+
+// Input Glow Effect
+
+input.addEventListener("mouseenter",()=>{
+
+    input.style.boxShadow="0 0 25px rgba(226,55,68,.6)";
+
+});
+
+input.addEventListener("mouseleave",()=>{
+
+    input.style.boxShadow="0 8px 25px rgba(0,0,0,.3)";
+
+});
+
+
+// Navbar Hover Animation
+
+const links=document.querySelectorAll("header ul li a");
+
+links.forEach(link=>{
+
+    link.addEventListener("mouseover",()=>{
+
+        link.style.transform="translateY(-3px)";
+
+    });
+
+    link.addEventListener("mouseout",()=>{
+
+        link.style.transform="translateY(0px)";
+
+    });
+
+});
+
+
+// Smooth Fade of Main Content
+
+const main=document.querySelector("main");
+
+main.animate(
+
+[
+    {
+        opacity:0,
+        transform:"translateY(50px)"
+    },
+
+    {
+        opacity:1,
+        transform:"translateY(0px)"
+    }
+
+],
+
+{
+    duration:1200,
+    easing:"ease"
+}
+
+);

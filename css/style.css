@@ -1,0 +1,259 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fff;
+    color:#1c1c1c;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 90px;
+    z-index:100;
+}
+
+.logo img{
+    width:130px;
+}
+
+header ul{
+    display:flex;
+    list-style:none;
+}
+
+header ul li{
+    margin-left:35px;
+}
+
+header ul li a{
+    text-decoration:none;
+    color:#fff;
+    font-size:17px;
+    font-weight:400;
+    transition:.3s;
+}
+
+header ul li a:hover{
+    color:#ff4f5a;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("../img/bg.png");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-logo{
+    width:320px;
+    margin-bottom:30px;
+}
+
+.hero h1{
+    color:#fff;
+    font-size:48px;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+.hero p{
+    color:#fff;
+    font-size:24px;
+    margin-bottom:35px;
+}
+
+/* ================= SEARCH ================= */
+
+.search-box{
+    width:750px;
+}
+
+.search-box input{
+    width:100%;
+    padding:18px 25px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    font-size:17px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    width:90%;
+    margin:70px auto;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.service-card{
+    width:340px;
+    background:#fff;
+    border:1px solid #e8e8e8;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.service-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.service-card:hover img{
+    transform:scale(1.08);
+}
+
+.content{
+    padding:20px;
+}
+
+.content h2{
+    font-size:24px;
+    font-weight:500;
+    margin-bottom:8px;
+}
+
+.content p{
+    color:#696969;
+    line-height:1.6;
+}
+
+/* ================= MAIN ================= */
+
+main{
+    width:80%;
+    margin:80px auto;
+    text-align:center;
+}
+
+main h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+main p{
+    font-size:18px;
+    color:#555;
+    line-height:1.8;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#1c1c1c;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+    font-size:15px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+header{
+    padding:20px 40px;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+.search-box{
+    width:90%;
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+}
+
+header ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+header ul li{
+    margin:10px;
+}
+
+.hero-logo{
+    width:220px;
+}
+
+.hero h1{
+    font-size:30px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.services{
+    width:95%;
+}
+
+.service-card{
+    width:100%;
+}
+
+main{
+    width:90%;
+}
+
+main h2{
+    font-size:30px;
+}
+
+main p{
+    font-size:16px;
+}
+
+}
